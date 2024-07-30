@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .nav-hover {
+    @apply hover:rounded-md hover:bg-primary hover:text-white;
+  }
+  .nav-group-item {
+    @apply group-hover:stroke-white;
+  }
+  .nav-active {
+    @apply rounded-md bg-primary text-white stroke-white;
+  }
+}
