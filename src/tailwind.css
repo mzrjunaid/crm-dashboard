@@ -12,4 +12,18 @@
   .nav-active {
     @apply rounded-md bg-primary text-white stroke-white;
   }
+  .access-pro {
+    @apply p-6 rounded-[20px] h-40 overflow-hidden;
+    @apply bg-gradient-to-br from-[#EAABF0] to-primary;
+  }
+  .access-pro__content {
+    @apply text-center text-white mb-5 font-semibold;
+  }
+  .access-pro__btn {
+    @apply bg-white text-primary font-semibold w-full h-10 rounded-[20px];
+    @apply hover:bg-slate-50;
+  }
+  .stat-icon {
+    @apply inline-block p-6 rounded-full bg-gradient-to-tr from-[#EFFFF6] to-[#D3FFE7];
+  }
 }
