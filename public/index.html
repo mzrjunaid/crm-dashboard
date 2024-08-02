@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRM Dashboard</title>
     <link rel="stylesheet" href="./assets/css/style.css?v=1" />
+    <link rel="stylesheet" href="./assets/css/dataTables.min.css" />
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script> 
   </head>
   <body class="h-full w-full flex">
     <aside
@@ -511,7 +514,29 @@
             </div>
           </div>
         </div>
+        <div>
+          <table id="customerTable" class="display">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Data</th>
+                <th>Data</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
+    <script src="./assets/js/dataTables.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
