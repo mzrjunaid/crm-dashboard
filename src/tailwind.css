@@ -26,4 +26,13 @@
   .stat-icon {
     @apply inline-block p-6 rounded-full bg-gradient-to-tr from-[#EFFFF6] to-[#D3FFE7];
   }
+  .status-active {
+    @apply border-secondary bg-secondary text-secondary;
+  }
+  .status-inactive {
+    @apply border-error bg-error text-error;
+  }
+  .cust-status {
+    @apply px-4 py-1 border rounded-[4px] bg-opacity-[0.38] font-medium;
+  }
 }

@@ -10,14 +10,31 @@ function Employee(name, position, salary, office) {
 }
 
 $("#customerTable").DataTable({
-  data: [
-    new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-    new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  ],
-  columns: [
-    { data: "name" },
-    { data: "salary" },
-    { data: "office" },
-    { data: "position" },
-  ],
+  pagingType: "simple_numbers",
+  lengthChange: false,
+  pageLength: 8,
+  // info: true,
+  autoWidth: false,
+  ordering: false,
+  columnDefs: [{ orderable: false }],
+  // data: [
+  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
+  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
+  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
+  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
+  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
+  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
+  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
+  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
+  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
+  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
+  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
+  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
+  // ],
+  // columns: [
+  //   { data: "name" },
+  //   { data: "salary" },
+  //   { data: "office" },
+  //   { data: "position" },
+  // ],
 });
