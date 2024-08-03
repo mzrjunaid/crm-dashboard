@@ -12,6 +12,7 @@ module.exports = {
         error: "#D0004B",
         black: "#333333",
         grayText: "#B5B7C0",
+        grayBackground: "#F9FBFF",
       },
     },
   },

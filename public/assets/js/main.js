@@ -1,40 +1,33 @@
-function Employee(name, position, salary, office) {
-  this.name = name;
-  this.position = position;
-  this.salary = salary;
-  this._office = office;
+$(".menu-button").on("click", function () {
+  $(".menu").toggleClass("hidden");
+});
 
-  this.office = function () {
-    return this._office;
-  };
-}
-
-$("#customerTable").DataTable({
+let table = $("#customerTable").DataTable({
+  dom: "tip",
+  responsive: true,
+  rowReorder: {
+    selector: "td:nth-child(2)",
+  },
   pagingType: "simple_numbers",
   lengthChange: false,
   pageLength: 8,
-  // info: true,
+  searching: true,
   autoWidth: false,
-  ordering: false,
-  columnDefs: [{ orderable: false }],
-  // data: [
-  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  //   new Employee("Tiger Nixon", "System Architect", "$3,120", "Edinburgh"),
-  //   new Employee("Garrett Winters", "Director", "$5,300", "Edinburgh"),
-  // ],
-  // columns: [
-  //   { data: "name" },
-  //   { data: "salary" },
-  //   { data: "office" },
-  //   { data: "position" },
-  // ],
+  ordering: true,
+  scrollX: true,
+  fixedHeader: false,
+  order: [],
+  columnDefs: [{ orderable: false, targets: "_all" }],
+});
+
+$("#customSearch").on("keyup", function () {
+  table.search(this.value).draw();
+});
+
+$("#sortOrder").on("change", function () {
+  if (this.value === "newest") {
+    table.order([0, "desc"]).draw();
+  } else {
+    table.order([0, "asc"]).draw();
+  }
 });

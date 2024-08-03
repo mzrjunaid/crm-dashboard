@@ -35,4 +35,24 @@
   .cust-status {
     @apply px-4 py-1 border rounded-[4px] bg-opacity-[0.38] font-medium;
   }
+  div.dt-container.dt-empty-footer .dt-scroll-body {
+    @apply !border-none;
+  }
+  div.dt-container .dt-info {
+    @apply float-left pt-3 mt-8 !text-grayText font-medium;
+  }
+
+  div.dt-container .dt-paging {
+    @apply float-right text-right mt-8;
+  }
+  div.dt-container .dt-paging nav {
+    @apply flex gap-3;
+  }
+
+  div.dt-container .dt-paging .dt-paging-button {
+    @apply !py-1.5 !px-4 !bg-[#F5F5F5] !border-[#EEEEEE] disabled:text-white active:text-white rounded font-medium hover:!bg-primary hover:bg-gradient-to-t hover:from-primary;
+  }
+  div.dt-container .dt-paging .dt-paging-button.current {
+    @apply !bg-primary !text-white;
+  }
 }
